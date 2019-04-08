@@ -1,0 +1,33 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+
+  &__Bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 2.5vw;
+  }
+
+  &__Logo {
+    font-size: 34px;
+    width: 100px;
+  }
+
+  &__Navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+  }
+
+  &__Hero {
+    height: calc(600px);
+    width: 100vw;
+    background-size: cover;
+    background-position: top;
+    background-image: url("../assets/aesthetic-bones-crystal-herbs-Favim.com-5181930.jpeg");
+  }
+}

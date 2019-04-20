@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { NavLink as Link } from "react-router-dom";
+import CategoryThumbnail from "./CategoryThumbnail";
 class ShopByCategory extends Component {
   constructor(props) {
     super(props);
@@ -10,27 +11,42 @@ class ShopByCategory extends Component {
       <div className="ShopByCat__Container">
         <h2 className="ShopByCat__Headline">Shop by Category</h2>
         <div className="ShopByCat__CatContainer">
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--herbsandoils">
-            <h3 className="CatLink">Herbs and Essential Oils</h3>
-          </div>
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--candles">
-            <h3 className="CatLink">Candles</h3>
-          </div>
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--crystalsrunes">
-            <h3 className="CatLink">Crystals and Runes</h3>
-          </div>
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--tarot">
-            <h3 className="CatLink">Tarot</h3>
-          </div>
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--books">
-            <h3 className="CatLink">Books</h3>
-          </div>
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--altar">
-            <h3 className="CatLink">Altars and Tools</h3>
-          </div>
-          <div className="ShopByCat__CategoryThumbnail ShopByCat__CategoryThumbnail--misc">
-            <h3 className="CatLink">Miscellaneous</h3>
-          </div>
+          <CategoryThumbnail
+            linkurl="herbal"
+            className="herbsandoils"
+            catName="Herbs and Essential Oils"
+          />
+          <CategoryThumbnail
+            linkurl="candles"
+            className="candles"
+            catName="Candles"
+          />
+          <CategoryThumbnail
+            linkurl="crystal"
+            className="crystalsrunes"
+            catName="Crystals and Runes"
+          />
+          <CategoryThumbnail
+            linkurl="tarot"
+            className="tarot"
+            catName="Tarot"
+          />
+          <CategoryThumbnail
+            linkurl="books"
+            className="books"
+            catName="Books"
+          />
+
+          <CategoryThumbnail
+            linkurl="altars"
+            className="altar"
+            catName="Altars and Tools"
+          />
+          <CategoryThumbnail
+            linkurl="misc"
+            className="misc"
+            catName="Miscellaneous"
+          />
         </div>
       </div>
     );

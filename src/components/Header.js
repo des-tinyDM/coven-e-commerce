@@ -7,7 +7,6 @@ class Header extends Component {
     this.state = { showNavCats: false };
   }
   render() {
-    console.log(this.props);
     return (
       <div className="Header">
         <div className="Header__Bar">

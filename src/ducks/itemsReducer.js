@@ -11,7 +11,7 @@ const initialState = {
 export function getCategoryList(category) {
   return {
     type: GET_CAT_LIST,
-    payload: axios.get(`/api/items?category=${category}`)
+    payload: axios.get(`/items?category=${category}`)
   };
 }
 

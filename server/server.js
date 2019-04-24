@@ -4,6 +4,7 @@ const setupMiddware = require("./middleware");
 // import { restRouter, graphQLRouter } from "./api";
 const connect = require("./db");
 // import { signin, protect } from "./api/modules/auth";
+const itemsRoute = require("./api/routes/itemsRoute");
 // Declare an app from express
 const app = express();
 
@@ -23,7 +24,7 @@ connect(app);
 // app.use("/graphql", graphQLRouter);
 // app.use("/docs", graphiqlExpress({ endpointURL: "/graphql" }));
 // catch all
-app.use("/api", apiRouter);
+app.use("/items", itemsRoute);
 app.all("*", (req, res) => {
   res.json({ ok: true });
 });

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+
 import "./scss/main.scss";
 import Header from "./components/Header";
-import ShopByCategory from "./components/ShopByCategory";
 import { Main } from "./routes";
 
 class App extends Component {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink as Link } from "react-router-dom";
 import CategoryThumbnail from "./CategoryThumbnail";
 class ShopByCategory extends Component {
   constructor(props) {

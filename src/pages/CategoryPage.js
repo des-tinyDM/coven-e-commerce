@@ -10,7 +10,6 @@ class CategoryPage extends Component {
   }
   componentDidMount() {
     let str = this.props.location.pathname.slice(1);
-
     this.props.getCategoryList(str);
   }
   render() {
@@ -22,9 +21,14 @@ class CategoryPage extends Component {
       pageTitle = "Unknown";
     }
     console.log(this.props);
+
+    let bookList = this.props.categoryList.map((book, index) => {
+      return <div key={index}>{book.book_name}</div>;
+    });
     return (
       <div className="CategoryPage">
         <h2 className="CategoryPage__title Title">{pageTitle}</h2>
+        {bookList}
       </div>
     );
   }
@@ -32,7 +36,9 @@ class CategoryPage extends Component {
 
 const mapStateToProps = state => {
   return {
-    categoryList: state.itemsReducer.catList
+    categoryList: state.itemsReducer.categoryList,
+    loading: state.itemsReducer.isLoading,
+    error: state.itemsReducer.error
   };
 };
 

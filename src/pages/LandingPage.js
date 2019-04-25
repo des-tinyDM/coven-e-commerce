@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "../components/Header";
 import ShopByCategory from "../components/ShopByCategory";
 import Extras from "../components/Extras";
 
